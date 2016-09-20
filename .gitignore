@@ -7,10 +7,11 @@
 *.toc
 .metadata
 bin/
+lib/
 .classpath
 .project
 .settings/
 RemoteSystemsTempFiles/
 *.class
-
 gmtech_school_manlio
+

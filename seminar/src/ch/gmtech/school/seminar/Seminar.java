@@ -4,55 +4,55 @@ import java.util.ArrayList;
 
 public class Seminar {
 
-	private String name;
-	private String description;
-	private String location;
-	private int seats;
+	private String _name;
+	private String _description;
+	private String _location;
+	private int _seats;
 	
-	private ArrayList<Enrollment> enrollments;
-	private ArrayList<Course> courses;
+	private ArrayList<Enrollment> _enrollments;
+	private ArrayList<Course> _courses;
 
 	public Seminar(String name, String description, String location, int seats) {
-		this.name = name;
-		this.description = description;
-		this.location = location;
-		this.seats = seats;
+		_name = name;
+		_description = description;
+		_location = location;
+		_seats = seats;
 	}
 	
 	public String getName() {
-		return this.name; 
+		return _name; 
 	}	
 
 	public String getDescription() {
-		return this.description; 
+		return _description; 
 	}
 	
 	public String getLocation() {
-		return this.location; 
+		return _location; 
 	}
 	
 	public int getSeatsLeft() {
-		return this.seats - this.enrollments.size();
+		return _seats - _enrollments.size();
 	}
 	
 	public void addEnrollment(Student student, String info){
 		Enrollment enrollment = new Enrollment(student, info);
-		this.enrollments.add(enrollment);
+		_enrollments.add(enrollment);
 	}
 	
 	public ArrayList<Student> getStudentList(){
 		ArrayList<Student> list = new ArrayList<Student>();
-		for(Enrollment enrollment : enrollments){
-			list.add(enrollment.student);
+		for(Enrollment enrollment : _enrollments){
+			list.add(enrollment._student);
 		}
 		return list;
 	}
 
 	public void addCourse(Course course){
-		this.courses.add(course);
+		_courses.add(course);
 	}
 	
 	public ArrayList<Course> getCourseList(){
-		return courses;
+		return _courses;
 	}
 }

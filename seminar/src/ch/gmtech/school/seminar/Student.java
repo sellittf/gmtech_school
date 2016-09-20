@@ -2,21 +2,21 @@ package ch.gmtech.school.seminar;
 
 public class Student {
 
-	private String firstName;
-	private String lastName;
-	private String info;
+	private String _firstName;
+	private String _lastName;
+	private String _info;
 	
 	public Student(String firstName, String lastName, String info) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.info = info;
+		_firstName = firstName;
+		_lastName = lastName;
+		_info = info;
 	}
 	
 	public String getFullName() {
-		return this.firstName + " " + this.lastName;
+		return _firstName + " " + _lastName;
 	}
 	
 	public String getInfo(){
-		return this.info;
+		return _info;
 	}
 }

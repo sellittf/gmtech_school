@@ -1,15 +1,15 @@
 package ch.gmtech.school.seminar;
 
 public class Enrollment {
-	public Student student;
-	private String info;
+	public Student _student;
+	private String _info;
 	
 	public Enrollment(Student student, String info){
-		this.student = student;
-		this.info = info;
+		_student = student;
+		_info = info;
 	}
 	
 	public String getInfo(){
-		return this.info;
+		return _info;
 	}
 }
