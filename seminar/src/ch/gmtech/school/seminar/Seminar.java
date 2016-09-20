@@ -1,6 +1,7 @@
 package ch.gmtech.school.seminar;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Seminar {
 
@@ -9,8 +10,8 @@ public class Seminar {
 	private String _location;
 	private int _seats;
 	
-	private ArrayList<Enrollment> _enrollments;
-	private ArrayList<Course> _courses;
+	private List<Enrollment> _enrollments = new ArrayList<Enrollment>();
+	private List<Course> _courses = new ArrayList<Course>();
 
 	public Seminar(String name, String description, String location, int seats) {
 		_name = name;
@@ -40,8 +41,8 @@ public class Seminar {
 		_enrollments.add(enrollment);
 	}
 	
-	public ArrayList<Student> getStudentList(){
-		ArrayList<Student> list = new ArrayList<Student>();
+	public List<Student> getStudentList(){
+		List<Student> list = new ArrayList<Student>();
 		for(Enrollment enrollment : _enrollments){
 			list.add(enrollment._student);
 		}
@@ -52,7 +53,7 @@ public class Seminar {
 		_courses.add(course);
 	}
 	
-	public ArrayList<Course> getCourseList(){
+	public List<Course> getCourseList(){
 		return _courses;
 	}
 }

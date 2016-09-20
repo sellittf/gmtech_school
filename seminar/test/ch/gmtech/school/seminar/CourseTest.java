@@ -14,7 +14,7 @@ public class CourseTest {
 
 	@Before
 	public void setUp() throws Exception {
-		_course = new Course("Crash course", 1, new Date("2016-09-01"));
+		_course = new Course("Crash course", 1, new Date(2016,9,1));
 	}
 
 	@Test
@@ -30,7 +30,7 @@ public class CourseTest {
 	@Test
 	public void testGetStartDate() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-		assertEquals(sdf.format(_course.getStartDate()), sdf.format(new Date("2016-09-01")));
+		assertEquals(sdf.format(_course.getStartDate()), sdf.format(new Date(2016,9,1)));
 	}
 
 }
