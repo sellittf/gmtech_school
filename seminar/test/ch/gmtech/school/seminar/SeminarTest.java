@@ -1,8 +1,8 @@
 package ch.gmtech.school.seminar;
 
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,22 +20,22 @@ public class SeminarTest {
 
 	@Test
 	public void testGetName() {
-		assertEquals(_seminar.getName(), "Online Marketing");
+		assertThat(_seminar.getName(), is("Online Marketing"));
 	}
 
 	@Test
 	public void testGetDescription() {
-		assertEquals(_seminar.getDescription(), "Quick introduction");
+		assertThat(_seminar.getDescription(), is("Quick introduction"));
 	}
 
 	@Test
 	public void testGetLocation() {
-		assertEquals(_seminar.getLocation(), "Aula magna");
+		assertThat(_seminar.getLocation(), is("Aula magna"));
 	}
 
 	@Test
 	public void testGetSeatsLeft() {
-		assertEquals(_seminar.getSeatsLeft(), 15);
+		assertThat(_seminar.getSeatsLeft(), is(15));
 	}
 
 	@Test
@@ -43,10 +43,10 @@ public class SeminarTest {
 		Student student1 = new Student("Pinco", "Pallino", "uno qualunque");
 		_seminar.addEnrollment(student1, "marketing junior operator");
 		Student student2 = new Student("Jorge", "Camacho", "olé");
-		_seminar.addEnrollment(student2, "marketing advisor");
+		_seminar.addEnrollment(student2, "marketing advisor");		
 		
 		List<Student> students = Arrays.asList(student1, student2);
-		assertEquals(_seminar.getStudentList(), students);
+		assertThat(_seminar.getStudentList(), is(students));
 	}
 
 }
