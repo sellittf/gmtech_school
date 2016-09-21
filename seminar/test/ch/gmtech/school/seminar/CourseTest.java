@@ -3,7 +3,8 @@ package ch.gmtech.school.seminar;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +15,8 @@ public class CourseTest {
 
 	@Before
 	public void setUp() throws Exception {
-		_course = new Course("Crash course", 1, new Date(2016,9,1));
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		_course = new Course("Crash course", 1, sdf.parse("2016-09-01"));
 	}
 
 	@Test
@@ -28,8 +30,9 @@ public class CourseTest {
 	}
 
 	@Test
-	public void testGetStartDate() {
-		assertThat(_course.getStartDate(), is(new Date(2016,9,1)));
+	public void testGetStartDate() throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		assertThat(_course.getStartDate(), is(sdf.parse("2016-09-01")));
 	}
 
 }
