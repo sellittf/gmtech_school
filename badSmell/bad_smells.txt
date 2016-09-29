@@ -1,0 +1,15 @@
+- dedicated methods instead of commented code 
+- self explaining code, instead of commenting it 
+- calculate total for line item should be computed by the lineItem object itself
+- Duplicated code: calculating total for line item
+- Feature envy: summing line items total should be computed by the lineItemList object itself 
+- Duplicated code: summing order total
+- private getter is useless
+- Feature envy: instance method passing (another) instance, writeOrder should be either a class method or not require another instance as argument
+- initialize variable on declaration, where possible
+- declare Vector type and Iterator type
+- Feature envy: lineItem should not reference to the containing lineItemsList
+- lineitemlist class is redundant, remove it
+
+- remove unnecessary indirections
+- remove unused code ?
