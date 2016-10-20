@@ -10,11 +10,7 @@ class Rental {
 	}
 
 	public int getPoints() {
-		if (manyDaysNewRelease()) {
-			return 2;
-		}else{
-			return 1;			
-		}
+		return manyDaysNewRelease() ? 2 : 1;
 	}
 
 	private boolean manyDaysNewRelease() {
@@ -26,7 +22,6 @@ class Rental {
 	}
 
 	public String showFigures() {
-		return "\t" + _movie.getTitle() + "\t" + String.valueOf(getAmount())
-				+ "\n";
+		return "\t" + _movie.getTitle() + "\t" + String.valueOf(getAmount()) + "\n";
 	}
 }

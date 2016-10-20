@@ -13,8 +13,10 @@ public class Movie {
 	
 	public double getRentalPrice(int daysRented){
 		double amount = basePrice();
+
 		if (daysRented > baseDays())
 			amount += (daysRented - baseDays()) * dayPrice();
+
 		return amount;
 	}
 	
