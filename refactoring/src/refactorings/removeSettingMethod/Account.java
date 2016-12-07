@@ -4,10 +4,7 @@ public class Account {
 	private String _id;
 
 	Account (String id) {
-       setId(id);
+       _id = id;
 	}
-	   
-	void setId (String arg) {
-      _id = arg;
-   }
+
 }

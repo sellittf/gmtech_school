@@ -1,5 +1,7 @@
 package refactorings.introduceAssertion;
 
+import org.junit.Assert;
+
 public class Employee {
 
     private static final double NULL_EXPENSE = -1.0;
@@ -7,7 +9,8 @@ public class Employee {
     private Project _primaryProject;
     
 	double getExpenseLimit() {
-		// should have either expense limit or a primary project
+		Assert.assertTrue(_expenseLimit != NULL_EXPENSE || _primaryProject != null);
+		
 		return (_expenseLimit != NULL_EXPENSE) ?
 			_expenseLimit :
 			_primaryProject.getMemberExpenseLimit();

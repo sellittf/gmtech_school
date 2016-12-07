@@ -5,7 +5,7 @@ public class Employee {
 	private String name;
 	private boolean teamManager;
 	
-	public boolean isTeamManager(){
+	private boolean isTeamManager(){
 		return teamManager;
 	} 
 	
